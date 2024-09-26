@@ -5,6 +5,7 @@
      <AboutMe />
      <SkillsShowcase />
      <ProjectsCard />
+     <BlogComponent />  
     </div>
 </template>
 
@@ -14,5 +15,7 @@ import HeroSection from "../components/HeroSection.vue"
 import AboutMe from "../components/AboutMe.vue"
 import SkillsShowcase from '../components/SkillsShowcase.vue'
 import ProjectsCard from "../components/ProjectsCard.vue"
+import BlogComponent from "../components/BlogComponent.vue"
+
 
 </script>
