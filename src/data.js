@@ -161,7 +161,8 @@ export const blogPosts = [
         "Deployed on Netlify with smooth CI/CD integration, which provided a smooth, continuous integration process. Each time I pushed a new update to the main branch, it was automatically deployed, keeping the workflow streamlined. ",
       outro:
         "If you're working on a similar project or have ideas to improve codingpractices, feel free to reach out! I’m always open to exchanging insights, learning from others, or offering help with any challenges you may face.",
-    },
+      webLink:"https://eainteriordesign.netlify.app/"
+      },
   },
   {
     id: 2,

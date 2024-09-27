@@ -1,17 +1,17 @@
 <template>
-  <div class="grid grid-cols-3">
+  <div class="lg:grid lg:grid-cols-3">
     <div class="col-span-2 px-4 py-16">
-      <h1 class="text-4xl ml-24 font-bold mb-8">
+      <h1 class="md:text-4xl text-xl lg:ml-24 font-bold mb-8">
         {{ blogPost.description }}
       </h1>
-      <div class="flex justify-center custom-style">
+      <div class="md:flex justify-center custom-style">
         <img
           :src="EA"
           alt="blog"
-          class="rounded-lg h-[500px] w-4/5 border-2 border-lime-400 custom-style"
+          class="rounded-lg md:h-[500px] object-contain md:w-4/5 border-2 border-lime-400 custom-style"
         />
       </div>
-      <div class="flex ml-24 mt-8 gap-4">
+      <div class="flex lg:ml-24 mt-8 gap-4">
         <img
           :src="blogPost.author.avatar"
           alt="avatar"
@@ -24,13 +24,13 @@
           <p class="text-sm text-lime-500">Frontend Developer</p>
         </div>
       </div>
-      <div class="ml-24">
+      <div class="lg:ml-24">
         <p class="text-sm text-lime-500 mb-12">
-          Date: {{ blogPost.month }} - 
+          Date: {{ blogPost.month }} -
           <span class="text-xl">{{ blogPost.day }}</span>
         </p>
       </div>
-      <div class="ml-24 text-gray-800 leading-7 space-y-6">
+      <div class="lg:ml-24 text-gray-800 leading-7 space-y-6 text-justify">
         <!-- Introduction -->
         <p class="indent-8">
           {{ blogPost.content.introduction }}
@@ -51,7 +51,10 @@
           {{ blogPost.content.techStack.introduction }}
         </p>
         <ul class="list-disc list-inside ml-8">
-          <li v-for="tech in blogPost.content.techStack.technologies" :key="tech.title">
+          <li
+            v-for="tech in blogPost.content.techStack.technologies"
+            :key="tech.title"
+          >
             <strong class="text-lime-500">{{ tech.title }}:</strong>
             {{ tech.description }}
           </li>
@@ -62,8 +65,12 @@
           2. Key Features
         </h2>
         <ul class="list-disc list-inside ml-8">
-          <li v-for="features in blogPost.content.keyFeatures" :key="features.title">
-            <strong class="text-lime-500">{{features.title}}:</strong> {{features.description}}
+          <li
+            v-for="features in blogPost.content.keyFeatures"
+            :key="features.title"
+          >
+            <strong class="text-lime-500">{{ features.title }}:</strong>
+            {{ features.description }}
           </li>
         </ul>
 
@@ -72,30 +79,34 @@
           3. The Learning Experience
         </h2>
         <p>
-         {{blogPost.content.learningExperience}}
+          {{ blogPost.content.learningExperience }}
         </p>
 
         <!-- Deployment -->
         <h2 class="text-2xl font-semibold mt-8 text-lime-700">4. Deployment</h2>
         <p>
-          {{blogPost.content.deployment}}
+          {{ blogPost.content.deployment }}
         </p>
 
         <!-- Call to Action -->
         <p>
-            {{blogPost.content.outro}}
+          {{ blogPost.content.outro }}
         </p>
         <p class="font-semibold">
           <a
-            href="https://example.com"
+            :href="blogPost.content.webLink"
             target="_blank"
-            class="text-blue-600 hover:underline"
+            class="text-lime-700 hover:underline"
             >You can check the website here.</a
           >
         </p>
       </div>
     </div>
-    <div class="d-block"></div>
+    <div
+      class="mt-16 rounded-t-3xl bg-gradient-to-b from-lime-100 from-50% to-lime-400 border-2 border-lime-400"
+    >
+      <BlogComponent layout="block" />
+    </div>
   </div>
 </template>
 
@@ -104,7 +115,7 @@ import EA from "../assets/images/EA-img.png";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 import { blogPosts } from "../data";
-
+import BlogComponent from "../components/BlogComponent.vue";
 
 const route = useRoute();
 const blogId = Number(route.params.id);

@@ -18,7 +18,7 @@
           </p>
         </div>
         <div>
-          <button class="bg-lime-400 rounded-full p-2">Download Resume</button>
+          <button class="bg-lime-400 rounded-full p-2 mb-2">Download Resume</button>
         </div>
       </div>
 
