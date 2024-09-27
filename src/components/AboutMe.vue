@@ -18,7 +18,7 @@
           </p>
         </div>
         <div>
-          <button class="bg-lime-400 rounded-full p-2 mb-2">Download Resume</button>
+          <a href="/resume.pdf" download="CV_Sali_Memish.pdf" class="bg-lime-400 rounded-full p-2 mb-2">Download Resume</a>
         </div>
       </div>
 
@@ -113,4 +113,5 @@
 </template>
 
 <script setup>
+
 </script>

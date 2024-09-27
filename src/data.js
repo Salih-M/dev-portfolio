@@ -1,8 +1,8 @@
 export const navItems = [
-  { name: "About me", href: "/" },
-  { name: "Projects", href: "/" },
-  { name: "Blogs", href: "/" },
-  { name: "Resume", href: "/" },
+  { name: "About me", href: "#about-me" },
+  { name: "Projects", href: "#projects" },
+  { name: "Blogs", href: "#blogs" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export const skills = [
@@ -23,30 +23,28 @@ export const projectsCard = [
     projectName: "Brainster Labs",
     description:
       " Small project that i worked on during the Brainster Academy.",
-    pageLink: "/",
-    codeLink: "/",
+    pageLink: "https://brainsterl.netlify.app/",
   },
   {
     image: require("./assets/images/EA-img.png"),
     projectName: "EA Interior",
     description:
       "Web page for client created with React, Formik, and Tailwind CSS.The form sends submissions via EmailJS and includes multi-language support with i18next.",
-    pageLink: "/",
-    codeLink: "/",
+    pageLink: "https://eainteriordesign.netlify.app/",
   },
   {
     image: require("./assets/images/Lastfloors.png"),
     projectName: "Lastfloors Webpage",
     description:
       "Worked with colegue in building the responsive webpage using VueJs - Tailwind and Vuetify.",
-    pageLink: "/",
+    pageLink: "https://lastfloors.com/",
   },
   {
     image: require("./assets/images/lastfloors-app.png"),
     projectName: "Lastfloors aplication",
     description:
       "Prop-tech platorm - Collaborated on web applications, integrated APIs, developed authentication, created networking component, implemented TypeScript, and used Tailwind CSS for styling.",
-    pageLink: "/",
+    pageLink: "https://platform.lastfloors.com",
   },
 ];
 

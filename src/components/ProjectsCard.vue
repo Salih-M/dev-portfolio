@@ -49,6 +49,7 @@
               <div class="flex justify-between text-xs text-lime-950 mt-2">
                 <a
                   :href="project.pageLink"
+                  target="_blank"
                   class="bg-lime-400 rounded-full p-1"
                 >
                   View Page

@@ -18,7 +18,7 @@
           </div>
           <div>
             <a
-              href="/"
+              href="/contact"
               aria-label=""
               class="inline-flex items-center font-semibold text-lime-400"
             >
@@ -40,15 +40,23 @@
             <img
               class="object-cover w-40 h-40 rounded sm:h-64 xl:h-80 sm:w-64 xl:w-80"
               :src="RobotCharacter"
-              alt=""
+              alt="robot character"
             />
           </div>
         </div>
 
         <div class="flex items-center gap-4">
           <div class="flex gap-4 mt-11">
-            <span class="mdi mdi-linkedin text-4xl text-black"></span>
-            <span class="mdi mdi-github text-4xl text-black"></span>
+            <a
+              href=" https://www.linkedin.com/in/sali-memish-5320701ba/"
+              target="_blank"
+            >
+              <span class="mdi mdi-linkedin text-4xl text-black"></span
+            ></a>
+
+            <a href="https://github.com/Salih-M"
+              ><span class="mdi mdi-github text-4xl text-black"></span
+            ></a>
           </div>
 
           <div>

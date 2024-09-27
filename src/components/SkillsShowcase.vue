@@ -1,6 +1,6 @@
 <template>
   <div class="bg-black">
-    <div class="grid text-center text-lime-400 py-20">
+    <div class="grid text-center text-lime-400 py-12">
       <p
         class="text-3xl font-sans font-bold tracking-tight sm:text-4xl sm:leading-none"
       >

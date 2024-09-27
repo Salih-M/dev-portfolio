@@ -1,10 +1,11 @@
 <template>
     <div>
      <HeroSection />
-     <AboutMe />
-     <SkillsShowcase />
-     <ProjectsCard />
-     <BlogComponent />  
+     <AboutMe id="about-me"/>
+     <SkillsShowcase id="skills"/>
+     <BlogComponent id="blogs"/>  
+     <ProjectsCard  id="projects"/>
+     <!-- <ContactForm id="contact"/> -->
     </div>
 </template>
 
@@ -14,6 +15,7 @@ import AboutMe from "../components/AboutMe.vue"
 import SkillsShowcase from '../components/SkillsShowcase.vue'
 import ProjectsCard from "../components/ProjectsCard.vue"
 import BlogComponent from "../components/BlogComponent.vue"
+// import ContactForm from "../components/ContactForm.vue"
 
 
 </script>
