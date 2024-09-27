@@ -8,7 +8,7 @@
         <img
           :src="EA"
           alt="blog"
-          class="rounded-lg md:h-[500px] object-contain md:w-4/5 border-2 border-lime-400 custom-style"
+          class="rounded-lg md:h-[500px] object-contain md:object-fill md:w-4/5 border-2 border-lime-400 custom-style"
         />
       </div>
       <div class="flex lg:ml-24 mt-8 gap-4">
