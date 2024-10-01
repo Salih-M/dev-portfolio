@@ -20,7 +20,7 @@ const routes = [
     component: ContactForm,
   },
   {
-    path: "/:catchAll(.*)", 
+    path: "/:notFound", 
     name: "error-page",
     component: ErrorPage, 
   },
