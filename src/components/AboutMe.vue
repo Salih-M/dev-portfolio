@@ -1,5 +1,5 @@
 <template>
-  <div class="my-8  ">
+  <div class="my-8">
     <div
       class="md:grid grid-cols-2 sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8 mx-auto"
     >
@@ -17,8 +17,8 @@
             management, where I honed my leadership and problem-solving skills.
           </p>
         </div>
-        <div>
-          <a href="/resume.pdf" download="CV_Sali_Memish.pdf" class="bg-lime-400 rounded-full p-2 mb-2">Download Resume</a>
+        <div class="mb-4">
+          <a href="/resume.pdf" download="CV_Sali_Memish.pdf" class="bg-lime-400 rounded-full p-2">Download Resume</a>
         </div>
       </div>
 

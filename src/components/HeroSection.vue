@@ -48,13 +48,13 @@
         <div class="flex items-center gap-4">
           <div class="flex gap-4 mt-11">
             <a
-              href=" https://www.linkedin.com/in/sali-memish-5320701ba/"
+              href="https://www.linkedin.com/in/sali-memish-5320701ba/"
               target="_blank"
             >
               <span class="mdi mdi-linkedin text-4xl text-black"></span
             ></a>
 
-            <a href="https://github.com/Salih-M"
+            <a href="https://github.com/Salih-M" target="_blank"
               ><span class="mdi mdi-github text-4xl text-black"></span
             ></a>
           </div>

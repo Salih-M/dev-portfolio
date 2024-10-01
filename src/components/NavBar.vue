@@ -14,13 +14,13 @@
         </a>
         <ul class="flex items-center hidden space-x-8 lg:flex">
           <li v-for="item in navItems" :key="item.name">
-            <a
-              :href="item.href"
+            <router-link
+              :to="item.href"
               :aria-label="item.name"
               :title="item.name"
               class="font-medium"
-              >{{ item.name }}</a
-            >
+              >{{ item.name }}
+            </router-link>
           </li>
         </ul>
         <div class="lg:hidden bg-lime-400">
@@ -79,12 +79,13 @@
               <nav>
                 <ul class="space-y-4">
                   <li v-for="item in navItems" :key="item.name">
-                    <a
-                      :href="item.name"
+                    <router-link
+                      :to="item.href"
                       :aria-label="item.name"
+                      @click="isMenuOpen = false"
                       :title="item.name"
                       class="font-medium"
-                      >{{ item.name }}</a
+                      >{{ item.name }}</router-link
                     >
                   </li>
                 </ul>

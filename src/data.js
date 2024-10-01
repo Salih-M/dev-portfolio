@@ -1,8 +1,8 @@
 export const navItems = [
-  { name: "About me", href: "#about-me" },
-  { name: "Projects", href: "#projects" },
-  { name: "Blogs", href: "#blogs" },
-  { name: "Contact", href: "/contact" },
+  { name: "About me", href: { path: "/", hash: "#about-me" } },
+  { name: "Projects", href: { path: "/", hash: "#projects" } },
+  { name: "Blogs", href: { path: "/", hash: "#blogs" } },
+  { name: "Contact", href: { path: "/contact" } },
 ];
 
 export const skills = [
