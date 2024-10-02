@@ -3,7 +3,7 @@
     <div
       class="md:grid grid-cols-2 sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8 mx-auto"
     >
-      <div >
+      <div>
         <h1
           class="font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
         >
@@ -18,7 +18,12 @@
           </p>
         </div>
         <div class="mb-4">
-          <a href="/resume.pdf" download="CV_Sali_Memish.pdf" class="bg-lime-400 rounded-full p-2">Download Resume</a>
+          <a
+            href="/resume.pdf"
+            download="CV_Sali_Memish.pdf"
+            class="bg-lime-400 rounded-full p-2"
+            >Download Resume</a
+          >
         </div>
       </div>
 
@@ -72,8 +77,8 @@
                     2023-2024 Freelancer
                   </p>
                   <p class="text-lime-200 text-sm">
-                    Have been working as a frelancer with focus on updating my
-                    coding skills
+                    I have been working as a freelancer, applying and
+                    continuously enhancing my expertise in web development.
                   </p>
                 </div>
               </div>
@@ -93,7 +98,9 @@
               <div
                 class="flex flex-col pb-6 sm:items-center sm:flex-row sm:pb-0"
               >
-                <div class="bg-lime-600 rounded p-1 md:w-80 lg:w-96 w-5/6 border-2">
+                <div
+                  class="bg-lime-600 rounded p-1 md:w-80 lg:w-96 w-5/6 border-2"
+                >
                   <p class="font-semibold text-lime-100">
                     2022 - 2023 Brainster Academy
                   </p>
@@ -113,5 +120,4 @@
 </template>
 
 <script setup>
-
 </script>

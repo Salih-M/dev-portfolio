@@ -12,8 +12,15 @@
           : 'block'
       "
     >
-      <div v-for="blog in blogsData" :key="blog.id"  :class="props.layout === 'grid' ? 'flex' : 'block mb-8'">
-        <div class="pt-1 mr-6 text-center " :class="props.layout === 'block' ? 'mb-4' : ''">
+      <div
+        v-for="blog in blogsData"
+        :key="blog.id"
+        :class="props.layout === 'grid' ? 'flex' : 'block mb-8'"
+      >
+        <div
+          class="pt-1 mr-6 text-center"
+          :class="props.layout === 'block' ? 'mb-4' : ''"
+        >
           <div class="px-2 pb-1 mb-1 border-b border-black">
             <p class="text-sm text-lime-700">{{ blog.month }}</p>
           </div>
@@ -81,12 +88,12 @@
 <script setup>
 import { ref } from "vue";
 import { blogPosts } from "../data";
-import { defineProps } from 'vue'
+import { defineProps } from "vue";
 
 const props = defineProps({
   layout: {
     type: String,
-    default: 'grid',
+    default: "grid",
   },
 });
 
