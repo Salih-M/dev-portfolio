@@ -7,10 +7,13 @@
 
     <div class="md:mt-24 mt-2">
       <p class="text-6xl font-semibold text-lime-600">Don`t Cry !</p>
-      <p class="text-4xl font-semibold">
-        We are just lost in space - enjoy it !
+      <p class="text-4xl font-semibold mb-6">
+        We are just lost in space <br><span class="text-lime-600">Enjoy it</span> !
       </p>
-      <button class="bg-lime-400 rounded-full p-2 mt-4">Go Back</button>
+
+      <router-link to="/" class="bg-lime-400 rounded-full p-2 font-semibold">
+        Fly Back
+      </router-link>
       <img :src="UfoCursor" alt="robot character" class="w-48 h-48" />
       <img :src="UfoCursor" alt="robot character" class="w-16 h-16" />
     </div>
