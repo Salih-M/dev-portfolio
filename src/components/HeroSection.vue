@@ -9,7 +9,7 @@
             <h2
               class="max-w-lg mb-6 font-sans text-2xl font-bold tracking-tight sm:text-4xl sm:leading-none"
             >
-              I`m<span class="text-lime-400 font-serif ml-2">Sali Memish</span
+              Hi there,<br class="md:block" />I am <span class="text-lime-400 font-serif ml-2">Sali</span
               ><br class="md:block" />
               Front End<span class="text-lime-400 font-serif ml-2"
                 >Developer

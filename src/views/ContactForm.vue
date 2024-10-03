@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-black border-t-2 border-lime-400 min-h-screen flex items-center justify-center"
+    class="bg-black border-t-2 border-lime-400 min-h-screen flex items-center justify-center py-4"
   >
     <div
       class="lg:grid grid-cols-2 sm:max-w-xl md:max-w-full lg:max-w-screen-xl px-4 md:px-24 lg:px-8 mx-auto gap-4 content-center"
@@ -39,8 +39,16 @@
           class="bg-gradient-to-t from-lime-400 from-20% to-lime-100 md:w-96 mt-6 rounded-3xl"
         >
           <div class="p-4">
-            <span class="mdi mdi-linkedin text-4xl"></span>
-            <span class="mdi mdi-github text-4xl"></span>
+            <a
+              href="https://www.linkedin.com/in/sali-memish-5320701ba/"
+              target="_blank"
+            >
+              <span class="mdi mdi-linkedin text-4xl text-black"></span
+            ></a>
+
+            <a href="https://github.com/Salih-M" target="_blank"
+              ><span class="mdi mdi-github text-4xl text-black"></span
+            ></a>
           </div>
         </div>
       </div>
