@@ -41,6 +41,7 @@
               class="object-cover w-40 h-40 rounded sm:h-64 xl:h-80 sm:w-64 xl:w-80"
               :src="RobotCharacter"
               alt="robot character"
+              loading="lazy"
             />
           </div>
         </div>
@@ -49,12 +50,12 @@
           <div class="flex gap-4 mt-11">
             <a
               href="https://www.linkedin.com/in/sali-memish-5320701ba/"
-              target="_blank"
+              target="_blank" alt="Linkedin"
             >
               <span class="mdi mdi-linkedin text-4xl text-black"></span
             ></a>
 
-            <a href="https://github.com/Salih-M" target="_blank"
+            <a href="https://github.com/Salih-M" target="_blank" alt="Github"
               ><span class="mdi mdi-github text-4xl text-black"></span
             ></a>
           </div>
