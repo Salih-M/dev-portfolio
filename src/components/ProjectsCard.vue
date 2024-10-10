@@ -35,7 +35,7 @@
             <img
               class="object-cover w-full h-56 md:h-64 xl:h-80"
               :src="project.image"
-              alt=""
+              alt="project cover"
             />
             <div
               class="absolute inset-x-0 bottom-0 p-3 bg-lime-300 bg-opacity-40"
