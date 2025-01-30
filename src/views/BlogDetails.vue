@@ -6,7 +6,7 @@
       </h1>
       <div class="md:flex justify-center custom-style">
         <img
-          :src="EA"
+          :src="blogPost.coverImg"
           alt="blog"
           class="rounded-lg md:h-[500px] object-contain md:object-fill md:w-4/5 border-2 border-lime-400 custom-style"
         />
@@ -26,80 +26,44 @@
       </div>
       <div class="lg:ml-24">
         <p class="text-sm text-lime-500 mb-12">
-          Date: {{ blogPost.month }} -
-          <span class="text-xl">{{ blogPost.day }}</span>
+          Date: {{ blogPost.month }} - <span class="text-xl">{{ blogPost.day }}</span>
         </p>
       </div>
+
       <div class="lg:ml-24 text-gray-800 leading-7 space-y-6 text-justify">
-        <!-- Introduction -->
-        <p class="indent-8">
-          {{ blogPost.content.introduction }}
-        </p>
-        <ul class="list-disc list-inside ml-8">
-          <li
-            v-for="principle in blogPost.content.principles"
-            :key="principle.title"
-          >
-            <strong class="text-lime-500">{{ principle.title }}:</strong>
-            {{ principle.description }}
-          </li>
-        </ul>
+        <!-- Render dynamic content -->
+        <template v-for="(block, index) in blogPost.content" :key="index">
+          <p v-if="block.type === 'paragraph'" class="indent-8">
+            {{ block.text }}
+          </p>
+          <p v-if="block.type ==='introduction'" class="text-2xl font-semibold mt-8 text-lime-700"> {{ block.title }}</p>
+           <p v-if="block.type === 'introduction'" class="indent-8">
+            {{ block.description }}
+          </p>
 
-        <!-- Tech Stack -->
-        <h2 class="text-2xl font-semibold mt-8 text-lime-700">1. Tech Stack</h2>
-        <p>
-          {{ blogPost.content.techStack.introduction }}
-        </p>
-        <ul class="list-disc list-inside ml-8">
-          <li
-            v-for="tech in blogPost.content.techStack.technologies"
-            :key="tech.title"
-          >
-            <strong class="text-lime-500">{{ tech.title }}:</strong>
-            {{ tech.description }}
-          </li>
-        </ul>
+          <h2 v-if="block.type === 'section'" class="text-2xl font-semibold mt-8 text-lime-700">
+            {{ block.title }}
+          </h2>
+          <p v-if="block.type === 'section'">{{ block.text }}</p>
+          <ul v-if="block.type === 'section'" class="list-disc list-inside ml-8">
+            <li v-for="(item, idx) in block.items" :key="idx">
+              <strong class="text-lime-500">{{ item.title }}:</strong> {{ item.description }}
+            </li>
+          </ul>
 
-        <!-- Key Features -->
-        <h2 class="text-2xl font-semibold mt-8 text-lime-700">
-          2. Key Features
-        </h2>
-        <ul class="list-disc list-inside ml-8">
-          <li
-            v-for="features in blogPost.content.keyFeatures"
-            :key="features.title"
-          >
-            <strong class="text-lime-500">{{ features.title }}:</strong>
-            {{ features.description }}
-          </li>
-        </ul>
+          <h3 v-if="block.type === 'list'" class="text-2xl font-semibold mt-8 text-lime-700">
+            {{ block.title }}
+          </h3>
+          <ul v-if="block.type === 'list'" class="list-disc list-inside ml-8">
+            <li v-for="(item, idx) in block.items" :key="idx">{{ item }}</li>
+          </ul>
 
-        <!-- Learning Experience -->
-        <h2 class="text-2xl font-semibold mt-8 text-lime-700">
-          3. The Learning Experience
-        </h2>
-        <p>
-          {{ blogPost.content.learningExperience }}
-        </p>
-
-        <!-- Deployment -->
-        <h2 class="text-2xl font-semibold mt-8 text-lime-700">4. Deployment</h2>
-        <p>
-          {{ blogPost.content.deployment }}
-        </p>
-
-        <!-- Call to Action -->
-        <p>
-          {{ blogPost.content.outro }}
-        </p>
-        <p class="font-semibold">
-          <a
-            :href="blogPost.content.webLink"
-            target="_blank"
-            class="text-lime-700 hover:underline"
-            >You can check the website here.</a
-          >
-        </p>
+          <p v-if="block.type === 'link'" class="font-semibold">
+            <a :href="block.url" target="_blank" class="text-lime-700 hover:underline">
+              {{ block.text }}
+            </a>
+          </p>
+        </template>
       </div>
     </div>
     <div
@@ -111,7 +75,6 @@
 </template>
 
 <script setup>
-import EA from "../assets/images/EA-img.png";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 import { blogPosts } from "../data";
